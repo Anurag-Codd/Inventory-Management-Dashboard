@@ -112,7 +112,6 @@ export const refresh = createAsyncThunk(
       sessionStorage.setItem("$INVACCESS", res.data.access);
       return res.data;
     } catch (error) {
-      sessionStorage.removeItem("$INVACCESS")
       return rejectWithValue(
         error.response?.data || { error: "Account refresh failed" }
       );
