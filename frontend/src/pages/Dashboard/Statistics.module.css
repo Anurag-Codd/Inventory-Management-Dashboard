@@ -1,0 +1,171 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+  overflow-x: hidden;
+}
+
+.topContainer {
+  display: flex;
+  gap: 14px;
+}
+
+.topPanel {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  flex: 1;
+  cursor: grab;
+  position: relative;
+  overflow: hidden;
+}
+
+.topPanel:active {
+  cursor: grabbing;
+  transform: translateY(0);
+}
+
+.revenue{
+  background-color: #FAD85D;
+}
+
+.sold{background-color: #0BF4C8;}
+
+.stock{
+  background-color: #F2A0FF;
+}
+
+.bottomContainer {
+  display: flex;
+  gap: 14px;
+  height: 100%;
+  min-height: 400px;
+}
+
+.largePanel {
+  background-color: #fff;
+  padding: 10px 20px;
+  border-radius: 12px;
+  flex: 3;
+}
+
+.rightPanel {
+  background-color: #fff;
+  padding: 10px 20px;
+  border-radius: 12px;
+  flex: 1;
+}
+
+.panelTitle {
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #333;
+  font-size: 16px;
+}
+
+.statsText {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.statsText > span:first-child {
+  font-weight: 600;
+  font-size: 24px;
+  color: #222;
+}
+
+.statsText > span:last-child {
+  font-size: 13px;
+  color: #666;
+  font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  .dashboard {
+    padding: 12px;
+    gap: 10px;
+  }
+
+  .topContainer {
+    gap: 10px;
+  }
+
+  .topPanel {
+    padding: 24px 10px;
+    min-width: 160px;
+    flex: 1 1 calc(50% - 5px);
+  }
+
+  .panelTitle {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .statsText > span:first-child {
+    font-size: 20px;
+  }
+
+  .statsText > span:last-child {
+    font-size: 12px;
+  }
+
+  .bottomContainer {
+    min-height: 300px;
+    gap: 10px;
+  }
+
+  .largePanel {
+    padding: 8px 16px;
+  }
+
+  .rightPanel {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard {
+    padding: 8px;
+  }
+
+  .topContainer {
+    gap: 8px;
+    flex: 1;
+  }
+
+  .topPanel {
+    padding: 10px 6px;
+    min-width: 130px;
+    flex: 1 1 calc(50% - 4px);
+  }
+
+  .panelTitle {
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+
+  .statsText {
+    gap: 6px;
+  }
+
+  .statsText > span:first-child {
+    font-size: 16px;
+  }
+
+  .statsText > span:last-child {
+    font-size: 11px;
+  }
+
+  .bottomContainer {
+    min-height: 250px;
+  }
+
+  .largePanel {
+    padding: 6px 12px;
+    max-height: 400px;
+  }
+}

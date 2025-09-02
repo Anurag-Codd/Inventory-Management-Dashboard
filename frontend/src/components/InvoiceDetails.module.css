@@ -1,0 +1,300 @@
+.invoiceBackdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.invoiceWrapper {
+  position: relative;
+  background: transparent;
+}
+
+.invoiceActions {
+  display: flex;
+  position: absolute;
+  right: 0;
+  gap: 12px;
+  top: 10px;
+  z-index: 10001;
+  flex-direction: column;
+}
+
+.actionBtn {
+  border: none;
+  cursor: pointer;
+  padding: 12px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.closeBtn {
+  background-color: #ef4444;
+}
+
+.downloadBtn {
+  background-color: #3b82f6;
+}
+
+.printBtn {
+  background-color: #10b981;
+}
+
+.invoiceContainer {
+  border-radius: 12px;
+  width: 650px;
+  max-width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  background-color: white;
+}
+
+.invoiceContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.invoiceHeader {
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  padding: 20px;
+  background-color: #f4f6f7;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.invoiceHeader h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.invoiceHeader h3 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #475569;
+  margin-top: 10px;
+}
+
+.invoiceBilling {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.businessInfo {
+  text-align: end;
+}
+
+.billedTo h3,
+.businessInfo h3 {
+  margin-bottom: 4px;
+}
+
+.billedTo p,
+.businessInfo p {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #475569;
+}
+
+.invoiceContent {
+  display: flex;
+  padding: 20px;
+}
+
+.invoiceDetails {
+  display: flex;
+  padding: 10px 0;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+  flex: 1;
+  margin-bottom: 20px;
+}
+
+.detailLabel {
+  font-size: 14px;
+  color: #475569;
+  font-weight: 500;
+}
+
+.detailValue {
+  font-size: 14px;
+  color: #1e293b;
+}
+
+.invoiceTable {
+  flex: 2;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+}
+
+.invoiceTable table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.invoiceTable th {
+  text-align: left;
+  font-weight: 600;
+}
+
+.invoiceTable th,
+.invoiceTable td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 14px;
+  color: #1e293b;
+}
+
+.invoiceTable tr:last-child td {
+  border-bottom: none;
+}
+
+.note {
+  margin-right: 20px;
+  text-align: end;
+  font-size: 14px;
+  color: #475569;
+}
+
+.invoiceFooter {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  border-top: 1px solid #e2e8f0;
+  font-size: 12px;
+  color: #475569;
+}
+
+.invoiceFooter a {
+  color: #3b82f6;
+  text-decoration: none;
+}
+
+.invoiceFooter a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .invoiceActions {
+    right: 80px;
+    top: 15px;
+  }
+
+  .downloadBtn,
+  .printBtn {
+    display: none;
+  }
+
+  .closeBtn {
+    background-color: #efefef;
+    color: #1e293b;
+  }
+
+  .invoiceHeader h1 {
+    font-size: 18px;
+  }
+
+  .invoiceHeader h3 {
+    font-size: 12px;
+  }
+
+  .billedTo p,
+  .businessInfo p {
+    font-size: 11px;
+  }
+
+  .detailLabel {
+    font-size: 11px;
+  }
+
+  .detailValue {
+    font-size: 12px;
+  }
+
+  .invoiceTable th,
+  .invoiceTable td {
+    padding: 8px 6px;
+    font-size: 12px;
+  }
+  .note {
+    font-size: 12px;
+  }
+
+  .invoiceFooter {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .invoiceActions {
+    position: fixed;
+    right: 10px;
+    top: 10px;
+  }
+
+  .invoiceContainer {
+    top: 0;
+    left: 0;
+    position: fixed;
+    max-width: 100%;
+  }
+
+  .invoiceHeader {
+    padding: 12px;
+  }
+
+  .invoiceHeader h1 {
+    font-size: 16px;
+  }
+
+  .invoiceHeader h3 {
+    font-size: 10px;
+  }
+
+  .billedTo h3,
+  .businessInfo h3 {
+    font-size: 10px;
+  }
+
+  .billedTo p,
+  .businessInfo p {
+    font-size: 9px;
+  }
+
+  .invoiceContent {
+    padding: 12px;
+  }
+
+  .detailLabel {
+    font-size: 9px;
+  }
+
+  .detailValue {
+    font-size: 10px;
+  }
+
+  .invoiceTable th,
+  .invoiceTable td {
+    padding: 6px 4px;
+    font-size: 9px;
+  }
+
+  .invoiceFooter {
+    padding: 12px;
+    font-size: 9px;
+  }
+}

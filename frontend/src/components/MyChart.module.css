@@ -1,0 +1,35 @@
+* {
+  outline: none;
+}
+
+.title {
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.swap {
+  position: relative;
+}
+
+.swapBtn {
+  position: absolute;
+  right: 0;
+  background: #304a99;
+  color: white;
+  padding: 6px 28px;
+  border-radius: 6px;
+}
+
+.swapBtn:hover {
+  background: #3856ad;
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 16px;
+  }
+
+  .swapBtn {
+    font-size: 12px;
+  }
+}

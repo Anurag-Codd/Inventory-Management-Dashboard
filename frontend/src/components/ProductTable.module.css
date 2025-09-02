@@ -1,0 +1,220 @@
+.panel {
+  display: flex;
+  padding: 10px 20px;
+  border-radius: 12px;
+  flex-direction: column;
+  background-color: #fff;
+}
+
+.panel h3 {
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.tableWrapper {
+  margin: 10px 0;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    position: relative;
+  }
+
+  th,
+  td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #e5e5e5;
+    white-space: nowrap;
+  }
+
+  th {
+    font-weight: 600;
+    font-size: 14px;
+    color: #333;
+  }
+
+  td {
+    font-size: 14px;
+    color: #444;
+  }
+
+  tr:hover {
+    background: #fafafa;
+    cursor: pointer;
+  }
+}
+
+.inStock {
+  color: #10b981 !important;
+  font-weight: 600;
+}
+
+.outStock {
+  color: #ef4444 !important;
+  font-weight: 600;
+}
+
+.lowStock {
+  color: #f59e0b !important;
+  font-weight: 600;
+}
+
+.tableFooter {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footerBtn {
+  background: #f9f9fc;
+  color: black;
+  padding: 8px 32px;
+  border-radius: 4px;
+  transition: 0.2s ease;
+}
+
+.footerBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.prodBtn {
+  position: absolute;
+  padding: 8px 16px;
+  border-radius: 4px;
+  top: 12px;
+  right: 20px;
+}
+
+
+.createBackdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent backdrop */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.craeteContainer {
+  position: relative;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  width: 90%;
+  max-width: 400px;
+  border: 1px solid #e5e5e5;
+}
+
+.craeteContainer h2 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.productDeatisk {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+  padding: 12px;
+  background-color: #f9f9fc;
+  border-radius: 8px;
+  border: 1px solid #e5e5e5;
+}
+
+.productDeatisk span {
+  font-size: 14px;
+  color: #444;
+}
+
+.productDeatisk .orderQuantity {
+  font-weight: 600;
+  color: #1a1a1a;
+  font-size: 14px;
+}
+
+.craeteContainer button {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .panel {
+    padding: 16px;
+  }
+
+  .panel h3 {
+    font-size: 16px;
+    margin-bottom: 6px;
+  }
+
+  .tableWrapper {
+    th:nth-child(3),
+    td:nth-child(3),
+    th:nth-child(4),
+    td:nth-child(4) {
+      display: none;
+    }
+  }
+
+  .tableFooter {
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+  }
+
+  .footerBtn {
+    font-size: 12px;
+  }
+
+  .prodBtn {
+    position: fixed;
+    bottom: 80px;
+    right: 10px;
+    top: auto;
+    z-index: 100;
+    padding: 10px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .panel {
+    padding: 12px;
+  }
+
+  .panel h3 {
+    font-size: 15px;
+  }
+
+  .tableWrapper {
+    th,
+    td {
+      padding: 6px 14px;
+      font-size: 12px;
+    }
+
+    th {
+      font-size: 12px;
+    }
+
+    th:nth-child(2),
+    td:nth-child(2),
+    th:nth-child(5),
+    td:nth-child(5) {
+      display: none;
+    }
+  }
+}

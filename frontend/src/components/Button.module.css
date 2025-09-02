@@ -1,0 +1,21 @@
+.btn {
+  padding: 12px;
+  cursor: pointer;
+  border: none;
+  border-radius: 12px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(36, 37, 49);
+
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 2px 2px rgba(110, 110, 110, 0.8);
+}
+
+.btn:hover {
+  box-shadow: 0 5px 2px rgba(110, 110, 110, 0.8);
+  transform: translateY(-2px);
+}
+
+.btn:active {
+   box-shadow: 0 2px 2px rgba(110, 110, 110, 0.8);
+   transform: translateY(1px);
+}

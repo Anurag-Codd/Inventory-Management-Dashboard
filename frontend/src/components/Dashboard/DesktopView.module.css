@@ -1,0 +1,126 @@
+.desktopLayout {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  overflow: hidden;
+  background-color: rgb(66, 68, 87);
+}
+
+.sidebar {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.8);
+  background-color: rgb(36, 37, 49);
+}
+
+.sidebar hr {
+  border-color: rgb(54, 54, 54);
+}
+
+.logo {
+  flex: 1;
+  gap: 8px;
+  display: flex;
+  align-items: center;
+  padding: 10px 4px;
+}
+
+.logo img {
+  height: 28px;
+}
+
+.option {
+  margin-top: 10px;
+  flex: 20;
+  gap: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.activePath {
+  background-color: rgb(52, 54, 66);
+}
+
+.option a {
+  gap: 12px;
+  padding: 8px;
+  display: flex;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.userInfo {
+  flex: 1;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 10px;
+}
+
+.userInfo img {
+  height: 32px;
+}
+
+.userInfo span {
+  font-weight: 600;
+}
+
+.dashboard {
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard hr {
+  border-color: rgb(255, 255, 255);
+}
+
+.header {
+  display: flex;
+  color: rgb(255, 255, 255);
+  padding: 8px 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h3 {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.searchbar {
+  display: flex;
+  justify-items: center;
+  gap: 10px;
+  overflow: hidden;
+  padding: 6px 10px;
+  border-radius: 16px;
+  background-color: rgba(255, 255, 255, 0.13);
+}
+
+.header input {
+  border: none;
+  color: rgb(255, 255, 255);
+  background-color: transparent;
+}
+
+.header input::placeholder {
+  color: rgb(255, 255, 255);
+}
+
+.header input:focus {
+  outline: none;
+}
+
+.compWrapper {
+  flex: 20;
+  position: relative;
+  overflow-y: auto;
+}
+
+@media (max-width: 768px) {
+  .desktopLayout {
+    display: none;
+  }
+}
